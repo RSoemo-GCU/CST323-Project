@@ -1,0 +1,52 @@
+<!-- Created by Rhese Soemo -->
+<!-- For CST-323 Cloud Computing -->
+<!-- On 1/7/2021 -->
+<!-- This is my own work -->
+
+
+<!DOCTYPE html>
+<html 
+	xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="layoutDefault"
+>
+	<head>
+		<title>Edit Object - Update</title>
+		
+		<link th:href="@{/css/overall.css}" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<!-- HEADER -->
+		<h2>Edit Object</h2>
+		<br><br>
+		
+		<!-- FORM -->
+		<form action="#" th:action="@{saveupdate}" th:object="${ObjectModel}" method="post">
+			<!-- ID Input -->
+			<input name="id" type="hidden" th:value="${object.id}">
+		
+			<!-- Name Input -->
+			<label for="name">Name</label>  
+			<input id="name" name="name" type="text" placeholder="Name of Object" required="" th:attr="value = ${object.name}">
+			<br/><br/>
+			
+			<!-- Type Input-->
+			<label for="type">Type</label>  
+			<input id="type" name="type" type="text" placeholder="Type of Object" required="" th:attr="value = ${object.type}">
+			<br/><br/>
+			
+			<!-- Description Input-->
+			<label for="description">Description</label>  
+			<input id="description" name="description" type="text" placeholder="Description of Object" required="" th:attr="value = ${object.description}">
+			<br/><br/>
+			
+			<!-- Confirmation -->
+			<button id="submit" name="submit">Update</button>
+		</form>
+		<br /> <br /> <br /> <br /> <br />
+		<form th:action="@{/}">
+			<button>Back to Home Page</button>
+		</form>
+	</body>
+</html>

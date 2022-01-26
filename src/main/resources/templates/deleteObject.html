@@ -1,0 +1,34 @@
+<!-- Created by Rhese Soemo -->
+<!-- For CST-323 Cloud Computing -->
+<!-- On 1/7/2021 -->
+<!-- This is my own work -->
+
+<!DOCTYPE html>
+<html 
+	xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+>
+	<head>
+		<title>Delete Object - Remove</title>
+		
+		<link th:href="@{/css/overall.css}" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<!-- HEADER -->
+		<h2>Delete Object</h2>
+		<br><br>
+		
+		<form action="#" th:action="@{/savedelete}" th:object="${object}" method="post">
+			<input name="id" type="hidden" th:value="${object.id}">
+			<input name="name"type="hidden" th:value="${object.name}">
+			<input name="type" type="hidden" th:value="${object.type}">
+			<input name="description" type="hidden"  th:value="${object.description}">
+			<button type="submit" name="deleteItem">Confirm</button>
+		</form>
+		<p>  </p>
+		<form th:action="@{/}">
+			<button>Cancel</button>
+		</form>
+	</body>
+</html>

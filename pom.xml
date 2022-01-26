@@ -15,7 +15,7 @@
 	<description>Main Project to be hosted onto Multiple Cloud Platforms for CST-323</description>
 	<packaging>jar</packaging>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>15</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

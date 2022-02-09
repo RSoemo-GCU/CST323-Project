@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `objects`
 --
 
+USE `cst323-database`;
+
 CREATE TABLE `objects` (
   `id` int(10) NOT NULL,
   `type` varchar(25) NOT NULL,

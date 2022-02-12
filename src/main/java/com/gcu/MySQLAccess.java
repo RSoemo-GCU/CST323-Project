@@ -2,6 +2,7 @@
 /* For CST-323 Cloud Computing */
 /* On 1/7/2021 */
 /* This is my own work */
+/* Database Access Layer*/
 
 package com.gcu;
 
@@ -13,10 +14,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-//DATA BASE ACCESS LAYER
 @Repository
 public class MySQLAccess implements DatabaseInterface
 {
+	/* ===== Varaibles ===== */
 	@Autowired
 	DataSource dataSource;
 	JdbcTemplate jdbcTemplate;
@@ -27,6 +28,7 @@ public class MySQLAccess implements DatabaseInterface
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 	
+	/* ===== Create Database Object ===== */
 	@Override
 	public int createObject(ObjectModel createdObject)
 	{
@@ -39,12 +41,14 @@ public class MySQLAccess implements DatabaseInterface
 			);
 	}
 	
+	/* ===== Read Database Objects ===== */
 	@Override
 	public List<ObjectModel> readObjects()
 	{
 		return jdbcTemplate.query("select * from objects", new ObjectMapper());
 	}
 	
+	/* ===== Update Database Object ===== */
 	@Override
 	public void updateObject(ObjectModel updatedObject)
 	{
@@ -58,6 +62,7 @@ public class MySQLAccess implements DatabaseInterface
 			);
 	}
 	
+	/* ===== Delete Database Object ===== */
 	@Override
 	public void deleteObject(ObjectModel deleteObject)
 	{

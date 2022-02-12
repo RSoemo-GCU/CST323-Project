@@ -2,18 +2,20 @@
 /* For CST-323 Cloud Computing */
 /* On 1/7/2021 */
 /* This is my own work */
+/* Reference Architecture*/
 
 package com.gcu;
 
 public class ObjectModel
 {
-	//reference articture
+	/* ===== Class Variables ===== */
 	private int id;
 	private String type;
 	private String name;
 	private String description;
 	
 	
+	/* ===== Constructor ===== */
 	public ObjectModel() { super(); }
 	public ObjectModel(int id, String type, String name, String description)
 	{
@@ -25,6 +27,7 @@ public class ObjectModel
 	}
 	
 	
+	/* ===== Getters and Setters for Object Variables ===== */
 	public int getId() { return id;	}
 	public void setId(int id) { this.id = id; }
 	public String getType() { return type; }
@@ -35,6 +38,7 @@ public class ObjectModel
 	public void setDescription(String description) { this.description = description; }
 	
 	
+	/* ===== To String ===== */
 	@Override
 	public String toString()
 	{

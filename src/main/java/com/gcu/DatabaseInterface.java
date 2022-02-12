@@ -9,8 +9,8 @@ import java.util.List;
 
 public interface DatabaseInterface
 {
-	public int createObject(ObjectModel createdObject);
-	public List<ObjectModel> readObjects();
-	public void updateObject(ObjectModel updatedObject);
-	public void deleteObject(ObjectModel deleteObject);
+	public int createObject(ObjectModel createdObject);  // Create Object Method Model
+	public List<ObjectModel> readObjects();  // Read Object Method Model
+	public void updateObject(ObjectModel updatedObject);  // Update Object Method Model
+	public void deleteObject(ObjectModel deleteObject);  // Delete Object Method Model
 }

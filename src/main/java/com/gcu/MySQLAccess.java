@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MySQLAccess implements DatabaseInterface
 {
-	/* ===== Varaibles ===== */
+	/* ===== Variables ===== */
 	@Autowired
 	DataSource dataSource;
 	JdbcTemplate jdbcTemplate;

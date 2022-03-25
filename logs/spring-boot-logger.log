@@ -405,3 +405,6 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.spring
 2022-03-25 09:35:59,948 TRACE com.gcu.util.Tracer [http-nio-8080-exec-1] GCU Method com.gcu.MySQLAccess.readObjects execution ended at:Fri Mar 25 09:35:59 MST 2022
 2022-03-25 09:35:59,948 TRACE com.gcu.util.Tracer [http-nio-8080-exec-1] GCU Method com.gcu.WebpageController.HomePage execution lasted:7 ms
 2022-03-25 09:35:59,949 TRACE com.gcu.util.Tracer [http-nio-8080-exec-1] GCU Method com.gcu.WebpageController.HomePage execution ended at:Fri Mar 25 09:35:59 MST 2022
+2022-03-25 09:50:53,628 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(20)-127.0.0.1] Application shutdown requested.
+2022-03-25 09:50:53,639 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(20)-127.0.0.1] HikariPool-3 - Shutdown initiated...
+2022-03-25 09:50:53,641 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(20)-127.0.0.1] HikariPool-3 - Shutdown completed.

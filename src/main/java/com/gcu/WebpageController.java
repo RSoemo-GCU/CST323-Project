@@ -23,16 +23,13 @@ public class WebpageController
 	/* ===== CREATE ===== */
 	@GetMapping("/add")
 	public String AdditionPage(Model model)
-	{
-		System.out.println("[System | Webpage Controller] Addition page called by a client\n");		
+	{	
 		return "createObject";
 	}
 	
 	@RequestMapping("/saveaddition")
 	public String SaveAddition(ObjectModel newObject, Model model)
 	{
-		System.out.println("[System | Webpage Controller] A client is saving a new object");
-		System.out.println("          " + newObject.toString() + "\n");
 		database.createObject(newObject);
 		return "redirect:/";
 	}
@@ -42,7 +39,6 @@ public class WebpageController
 	@GetMapping("/")
 	public String HomePage(Model model)
 	{
-		System.out.println("[System | Webpage Controller] Home page called by a client\n");
 		model.addAttribute("objects", database.readObjects());		
 		return "readObjects";
 	}
@@ -51,8 +47,6 @@ public class WebpageController
 	@PostMapping("/modify")
 	public String ModificationPage(ObjectModel object, Model model)
 	{
-		System.out.println("[System | Webpage Controller] Modification page called by a client");
-		System.out.println("          " + object.toString() + "\n");
 		model.addAttribute("object", object);
 		return "updateObject";
 	}
@@ -60,8 +54,6 @@ public class WebpageController
 	@RequestMapping("/saveupdate")
 	public String SaveUpdate(ObjectModel newObject, Model model)
 	{
-		System.out.println("[System | Webpage Controller] A client is updating an object");
-		System.out.println("          " + newObject.toString() + "\n");
 		database.updateObject(newObject);
 		return "redirect:/";
 	}
@@ -70,8 +62,6 @@ public class WebpageController
 	@PostMapping("/remove")
 	public String RemovePage(ObjectModel om, Model model)
 	{
-		System.out.println("[System | Webpage Controller] Remove page called by a client");
-		System.out.println("          " + om.toString() + "\n");
 		model.addAttribute("object", om);		
 		return "deleteObject";
 	}
@@ -79,8 +69,6 @@ public class WebpageController
 	@RequestMapping("/savedelete")
 	public String SaveDelete(ObjectModel om, Model model)
 	{
-		System.out.println("[System | Webpage Controller] A client is deleting an object");
-		System.out.println("          " + om.toString() + "\n");
 		database.deleteObject(om);
 		return "redirect:/";
 	}
@@ -89,7 +77,6 @@ public class WebpageController
 	@GetMapping("/test")
 	public String Test(Model model)
 	{
-		System.out.println("[System | Webpage Controller] A client is running the test page");
 		return "testPage";
 	}
 }

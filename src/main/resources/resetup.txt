@@ -1,0 +1,2 @@
+rm -r -f CST323-Project/
+git clone --single-branch --branch google https://github.com/RSoemo-GCU/CST323-Project.git
